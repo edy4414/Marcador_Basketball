@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcador SGED</title>
+    <link rel="stylesheet" href="./CSS.css">
+</head>
+
+<body class="m-0 p-0">
+    <div class="teams">
+        <div class="team-1">
+            <p class="team-name" id="team-1">
+                TEAM A
+            </p>
+        </div>
+        <div class="team-2">
+            <p class="team-name" id="team-2">
+                TEAM B
+            </p>
+        </div>
+    </div>
+    <div class="top">
+        <div class="container">
+            <div class="one">
+                <div class="buttons">
+                    <button class="button" onclick="add(2,'score-1')">
+                        +2
+                    </button>
+                    <button class="button" onclick="add(3,'score-1')">
+                        +3
+                    </button>
+                </div>
+                <div class="board">
+                    <center>
+                        <p class="score p-0 m-0" id="score-1">
+                            0
+                        </p>
+                    </center>
+                </div>
+                <div class="buttons">
+                    <button class="button minus" onclick="add(-1,'score-1')">
+                        -1
+                    </button class="button">
+                    <button class="button minus" onclick="add(1,'score-1')">
+                        +1
+                    </button class="button">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="two">
+                <div class="buttons">
+                    <button class="button" onclick="add(2,'score-2')">
+                        +2
+                    </button>
+                    <button class="button" onclick="add(3,'score-2')">
+                        +3
+                    </button>
+                </div>
+                <div class="board">
+                    <center>
+                        <p class="score p-0 m-0" id="score-2">
+                            0
+                        </p>
+                    </center>
+                </div>
+                <div class="buttons">
+                    <button class="button minus" onclick="add(-1,'score-2')">
+                        -1
+                    </button class="button">
+                    <button class="button minus" onclick="add(1,'score-2')">
+                        +1
+                    </button class="button">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="reset-div">
+        <button class="reset" onclick="removeData()">
+            Juego Nuevo
+        </button>
+    </div>
+    <div class="bottom">
+        <div class="teams teams-bottom">
+            <div class="team-1">
+                <p class="team-name" id="team-name-scorecard-1">
+                    TEAM A
+                </p>
+            </div>
+            <div class="team-2">
+                <p class="team-name" id="team-name-scorecard-2">
+                    TEAM B
+                </p>
+            </div>
+        </div>
+        <div class="container-2">
+            <div class="data-one">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="theading">
+                                Marcador
+                            </th>
+                            <th class="theading">
+                                Tiempo
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="scoreCard-1">
+                    </tbody>
+                </table>
+            </div>
+            <div class="data-second">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="theading">
+                                Marcador
+                            </th>
+                            <th class="theading">
+                                Tiempo
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="scoreCard-2">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+<script src="./JS.js"></script>
+
+</html>

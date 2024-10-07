@@ -1,0 +1,163 @@
+@font-face {
+    font-family: 'digital';
+    src: url(./digital-7/digital-7.ttf);
+}
+
+body {
+    background-color: gray;
+    color: white;
+    height: 100vh;
+}
+
+.m-0 {
+    margin: 0%;
+}
+
+.p-0 {
+    padding: 0%;
+}
+
+.teams {
+    display: flex;
+    background-color: black;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    flex-basis: 0;
+    border-bottom: 2px solid white;
+}
+
+.team-name {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.team-1 {
+    border-right: 2px solid white;
+}
+
+.team-1,
+.team-2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.score {
+    font-size: 150px;
+    font-family: digital;
+    color: rgb(100, 255, 100);
+    padding: 25px 0px 30px 0px;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: space-between;
+}
+
+.teams-bottom {
+    border-top: 2px solid white;
+}
+
+.one,
+.two {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 5px;
+    border: 2px solid white;
+    background-color: black;
+    border-radius: 4px;
+    gap: 5px;
+}
+
+.container {
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 3px;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+.button:active {
+    background-color: rgb(26, 102, 5);
+}
+
+.buttons {
+    display: flex;
+    width: 100%;
+    gap: 2px;
+}
+
+.minus {
+    width: 100%;
+}
+
+.container-2 {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+}
+
+.data-one,
+.data-second {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.data-one {
+    border-right: 2px solid white;
+}
+
+table {
+    width: 100%;
+    height: fit-content;
+}
+thead{
+    background-color: rgb(34, 34, 34);
+}
+tbody{
+    background-color: rgb(49, 49, 49);
+}
+.reset-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.reset {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    border-radius: 4px;
+    padding: 4px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.theading{
+    font-size: larger;
+    font-weight: bold;
+}
+footer{
+    background: black;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+}
