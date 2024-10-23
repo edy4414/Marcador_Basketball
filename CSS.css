@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: gray;
+    background-color: rgb(23, 32, 42);
     color: white;
     height: 100vh;
 }
@@ -62,7 +62,8 @@ body {
 }
 
 .one,
-.two {
+.two,
+.tre {
     width: fit-content;
     display: flex;
     flex-direction: column;
@@ -160,4 +161,33 @@ footer{
     justify-content: center;
     align-items: center;
     border: 2px solid white;
+}
+#timer-container {
+  display: none;
+}
+
+#timer {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+#quarter {
+  font-size: 24px;
+  font-weight: bold;
+}
+.minus {
+  background-color: rgb(227, 14, 14);
+}
+
+.minus:hover {
+  background-color: rgb(97, 14, 14);
+}
+
+.times {
+  width: 100%;
+  margin: 40px auto;
+  text-align: center;
+}
+#pause-button {
+  margin: 10px;
 }

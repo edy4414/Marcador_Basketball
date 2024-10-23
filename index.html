@@ -6,18 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marcador SGED</title>
     <link rel="stylesheet" href="./CSS.css">
+	<button onclick="removeData()">Nuevo juego</button>
+    <button id="start-timer">Iniciar Partido</button>
+	<button id="stop-timer">Detener temporizador</button>
+	<button id="reset-timer">Reiniciar temporizador</button>
 </head>
-
 <body class="m-0 p-0">
     <div class="teams">
         <div class="team-1">
             <p class="team-name" id="team-1">
-                TEAM A
+                EQUIPO A
             </p>
         </div>
         <div class="team-2">
             <p class="team-name" id="team-2">
-                TEAM B
+                EQUIPO B
             </p>
         </div>
     </div>
@@ -25,12 +28,9 @@
         <div class="container">
             <div class="one">
                 <div class="buttons">
-                    <button class="button" onclick="add(2,'score-1')">
-                        +2
-                    </button>
-                    <button class="button" onclick="add(3,'score-1')">
-                        +3
-                    </button>
+					<button class="button minus" onclick="add(-1,'score-1')">
+                        -1
+                    </button class="button">
                 </div>
                 <div class="board">
                     <center>
@@ -40,25 +40,46 @@
                     </center>
                 </div>
                 <div class="buttons">
-                    <button class="button minus" onclick="add(-1,'score-1')">
-                        -1
-                    </button class="button">
-                    <button class="button minus" onclick="add(1,'score-1')">
+					<button class="button" onclick="add(1,'score-1')">
                         +1
                     </button class="button">
+                    <button class="button" onclick="add(2,'score-1')">
+                        +2
+                    </button>
+                    <button class="button" onclick="add(3,'score-1')">
+                        +3
+                    </button>
+                    
+                    
                 </div>
             </div>
         </div>
-        <div class="container">
+		
+		<div class="container">
             <div class="two">
-                <div class="buttons">
-                    <button class="button" onclick="add(2,'score-2')">
-                        +2
-                    </button>
-                    <button class="button" onclick="add(3,'score-2')">
-                        +3
-                    </button>
+               <div class="board">
+                    <center>
+                        <p class="score p-0 m-0" id="score-1">
+                        <div id="timer-container">
+						<h2 id="timer">00:00</h2>
+						<p id="quarter">Cuarto 1</p>
+						<button id="pause-button">Pausar temporizador</button>
+						<button id="resume-button">Reanudar temporizador</button>
+						</div>   
+                        </p>
+                    </center>
                 </div>
+                
+            </div>
+        </div>
+		
+        <div class="container">
+            <div class="tre">
+                <div class="buttons">
+					<button class="button minus" onclick="add(-1,'score-2')">
+                        -1
+                    </button class="button">
+                                    </div>
                 <div class="board">
                     <center>
                         <p class="score p-0 m-0" id="score-2">
@@ -67,31 +88,29 @@
                     </center>
                 </div>
                 <div class="buttons">
-                    <button class="button minus" onclick="add(-1,'score-2')">
-                        -1
-                    </button class="button">
-                    <button class="button minus" onclick="add(1,'score-2')">
+                    <button class="button" onclick="add(1,'score-2')">
                         +1
                     </button class="button">
+					<button class="button" onclick="add(2,'score-2')">
+                        +2
+                    </button>
+                    <button class="button" onclick="add(3,'score-2')">
+                        +3
+                    </button>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="reset-div">
-        <button class="reset" onclick="removeData()">
-            Juego Nuevo
-        </button>
     </div>
     <div class="bottom">
         <div class="teams teams-bottom">
             <div class="team-1">
                 <p class="team-name" id="team-name-scorecard-1">
-                    TEAM A
+                    EQUIPO A
                 </p>
             </div>
             <div class="team-2">
                 <p class="team-name" id="team-name-scorecard-2">
-                    TEAM B
+                    EQUIPO B
                 </p>
             </div>
         </div>
@@ -101,10 +120,10 @@
                     <thead>
                         <tr>
                             <th class="theading">
-                                Marcador
+                                Puntos Anotados
                             </th>
                             <th class="theading">
-                                Tiempo
+                                Hora de Anotación
                             </th>
                         </tr>
                     </thead>
@@ -117,10 +136,10 @@
                     <thead>
                         <tr>
                             <th class="theading">
-                                Marcador
+                                Puntos Anotados
                             </th>
                             <th class="theading">
-                                Tiempo
+                                Hora de Anotación
                             </th>
                         </tr>
                     </thead>

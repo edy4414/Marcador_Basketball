@@ -1,5 +1,9 @@
 //
 const key = "ScoreBoard720";
+let timerInterval;
+let quarter = 1;
+let minutes = 12;
+let seconds = 0;
 let team_1 = "TEAM A";
 let team_2 = "TEAM B";
 if (GetLocalStore(key) == null) {
@@ -14,10 +18,68 @@ else {
     team_1 = GetLocalStore(key)[0].name;
     team_2 = GetLocalStore(key)[1].name;
 }
+
+
+document.getElementById('start-timer').addEventListener('click', startTimer);
+document.getElementById('stop-timer').addEventListener('click', stopTimer);
+document.getElementById('reset-timer').addEventListener('click', resetTimer);
 document.getElementById('team-1').innerText = team_1
 document.getElementById('team-2').innerText = team_2
 document.getElementById('team-name-scorecard-1').innerText = team_1
 document.getElementById('team-name-scorecard-2').innerText = team_2
+document.getElementById('pause-button').addEventListener('click', pauseTimer);
+document.getElementById('resume-button').addEventListener('click', resumeTimer);
+
+
+
+function startTimer() {
+  document.getElementById('timer-container').style.display = 'block';
+  timerInterval = setInterval(updateTimer, 1000);
+}
+
+function stopTimer() {
+  clearInterval(timerInterval);
+}
+
+function pauseTimer() {
+  clearInterval(timerInterval);
+}
+function resumeTimer() {
+  timerInterval = setInterval(updateTimer, 1000);
+}
+
+
+function resetTimer() {
+  quarter = 1;
+  minutes = 12;
+  seconds = 0;
+  document.getElementById('timer').innerHTML = '00:00';
+  document.getElementById ('quarter').innerHTML = 'Cuarto 1';
+  clearInterval(timerInterval);
+}
+
+function updateTimer() {
+  seconds--;
+  if (seconds < 0) {
+    minutes--;
+    seconds = 59;
+  }
+  if (minutes < 0) {
+    quarter++;
+    minutes = 12;
+    seconds = 0;
+  }
+  if (quarter > 4) {
+    stopTimer();
+  }
+  document.getElementById('timer').innerHTML = `${padZero(minutes)}:${padZero(seconds)}`;
+  document.getElementById('quarter').innerHTML = `Cuarto ${quarter}`;
+}
+
+function padZero(num) {
+  return (num < 10 ? '0' : '') + num;
+}
+
 function add(num, id) {
     let number = Number(document.getElementById(id).innerText);
     if (number + num >= 0) {
@@ -93,6 +155,7 @@ function removeData() {
         window.location.reload();
     }
 }
+
 function ScoreCard(array, id) {
     document.getElementById(id).innerHTML = null;
     array.forEach(element => {
