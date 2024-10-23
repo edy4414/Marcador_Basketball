@@ -7,6 +7,8 @@ body {
     background-color: rgb(23, 32, 42);
     color: white;
     height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 .m-0 {
@@ -22,7 +24,7 @@ body {
     background-color: black;
     flex-wrap: nowrap;
     justify-content: space-around;
-    flex-basis: 0;
+    flex-basis:  0;
     border-bottom: 2px solid white;
 }
 
@@ -93,6 +95,7 @@ body {
     font-size: xx-large;
     font-weight: bolder;
 }
+
 .button:active {
     background-color: rgb(26, 102, 5);
 }
@@ -105,6 +108,11 @@ body {
 
 .minus {
     width: 100%;
+    background-color: rgb(227, 14, 14);
+}
+
+.minus:hover {
+    background-color: rgb(97, 14, 14);
 }
 
 .container-2 {
@@ -128,12 +136,15 @@ table {
     width: 100%;
     height: fit-content;
 }
-thead{
+
+thead {
     background-color: rgb(34, 34, 34);
 }
-tbody{
+
+tbody {
     background-color: rgb(49, 49, 49);
 }
+
 .reset-div {
     display: flex;
     align-items: center;
@@ -150,11 +161,13 @@ tbody{
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.theading{
+
+.theading {
     font-size: larger;
     font-weight: bold;
 }
-footer{
+
+footer {
     background: black;
     padding: 10px;
     display: flex;
@@ -162,32 +175,108 @@ footer{
     align-items: center;
     border: 2px solid white;
 }
+
 #timer-container {
-  display: none;
+    display: none;
 }
 
 #timer {
-  font-size: 48px;
-  font-weight: bold;
+    font-size: 48px;
+    font-weight: bold;
 }
 
 #quarter {
-  font-size: 24px;
-  font-weight: bold;
-}
-.minus {
-  background-color: rgb(227, 14, 14);
-}
-
-.minus:hover {
-  background-color: rgb(97, 14, 14);
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .times {
-  width: 100%;
-  margin: 40px auto;
-  text-align: center;
+    width: 100%;
+    margin: 40px auto;
+    text-align: center;
 }
+
 #pause-button {
-  margin: 10px;
+    margin: 10px;
+}
+
+/* Media Queries para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .teams {
+        flex-direction: column;
+    }
+
+    .team-1 {
+        border-right: none;
+        border-bottom: 2px solid white;
+    }
+
+    .score {
+        font-size: 80px;
+        padding: 15px 0px;
+    }
+
+    .top {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .one,
+    .two,
+    .tre {
+        width: 100%;
+    }
+
+    .container-2 {
+        flex-direction: column;
+    }
+
+    .data-one {
+        border-right: none;
+        border-bottom: 2px solid white;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    .theading {
+        font-size: medium;
+    }
+}
+
+/* Media Queries para tablets */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .score {
+        font-size: 100px;
+    }
+
+    .one,
+    .two,
+    .tre {
+        padding: 3px;
+    }
+
+    .button {
+        font-size: x-large;
+    }
+}
+
+/* Ajustes adicionales para el timer */
+@media screen and (max-width: 768px) {
+    #timer {
+        font-size: 32px;
+    }
+
+    #quarter {
+        font-size: 18px;
+    }
+
+    .times {
+        margin: 20px auto;
+    }
 }
