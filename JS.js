@@ -2,7 +2,7 @@
 const key = "ScoreBoard720";
 let timerInterval;
 let quarter = 1;
-let minutes = 12;
+let minutes = 10;
 let seconds = 0;
 let team_1 = "TEAM A";
 let team_2 = "TEAM B";
