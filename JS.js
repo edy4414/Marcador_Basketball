@@ -51,7 +51,7 @@ function resumeTimer() {
 
 function resetTimer() {
   quarter = 1;
-  minutes = 12;
+  minutes = 10;
   seconds = 0;
   document.getElementById('timer').innerHTML = '00:00';
   document.getElementById ('quarter').innerHTML = 'Cuarto 1';
@@ -66,7 +66,7 @@ function updateTimer() {
   }
   if (minutes < 0) {
     quarter++;
-    minutes = 12;
+    minutes = 10;
     seconds = 0;
   }
   if (quarter > 4) {
